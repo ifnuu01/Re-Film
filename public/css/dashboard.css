@@ -1,0 +1,90 @@
+:root {
+    --white: #ffffff;
+    --blue: #2ebcf9;
+    --red: #fc2f2f;
+    --dark-bg: #161a20;
+    --darker-bg: #22252f;
+    --yellow: #f9e52e;
+    --orange: #ff9147;
+    --gray: #5c636f;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+.sidebar {
+    background-color: var(--darker-bg);
+    min-height: 100vh;
+    position: fixed;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.btn-orange:hover {
+    background-color: #ff7b1f;
+}
+
+.nav-link {
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--white);
+}
+
+.nav-link.active {
+    color: var(--white);
+    background-color: var(--dark-bg);
+}
+
+.btn-blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.btn-blue:hover {
+    background-color: #1f9edf;
+}
+
+.logout-btn {
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+.table {
+    color: var(--white);
+    background-color: var(--darker-bg);
+}

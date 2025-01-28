@@ -1,0 +1,77 @@
+:root {
+    --dark-bg: #161a20;
+    --blue: #2ebcf9;
+    --orange: #ff9147;
+    --input-bg: #22252f;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    min-height: 100vh;
+}
+
+.brand-text {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.brand-re {
+    color: var(--blue);
+}
+
+.brand-film {
+    color: #ff9147;
+}
+
+.login-input {
+    background-color: var(--dark-bg);
+    border: none;
+    color: white;
+}
+
+.login-input:focus {
+    background-color: var(--input-bg);
+    color: white;
+    box-shadow: none;
+    border: 1px solid var(--blue);
+}
+
+.login-button {
+    background-color: var(--orange);
+    border: none;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background-color: #ff7b1f;
+}
+
+.register-button {
+    background-color: var(--blue);
+    border: none;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: #1da8e5;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #666;
+    margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #666;
+}
+
+.divider span {
+    padding: 0 1rem;
+}
