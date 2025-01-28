@@ -7,6 +7,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CastController;
 use App\Http\Controllers\ActorController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::middleware('auth')->group(function (){
     Route::get('/settings', [AuthController::class, 'changePasswordForm'])->name('settings');
     Route::post('/settings', [AuthController::class, 'changePassword']);
     Route::resource('actor', ActorController::class)->except(['index']);
+    Route::get('/profile/edit/{user_id}', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile/update/{user_id}', [ProfileController::class, 'update'])->name('profile.update');
 });
 
 Route::get('/', function () {

@@ -42,17 +42,31 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Profile $profile)
+    public function edit($user_id)
     {
-        //
+        $profile = Profile::where('user_id', $user_id)->first();
+
+        if (!$profile) {
+            abort(404);
+        }
+
+        return view('profile.edit', compact('profile'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Profile $profile)
+    public function update(Request $request, $user_id)
     {
-        //
+        $request->validate([
+            'age' => 'required|integer|min:1',
+            'bio' => 'required|string'
+        ]);
+
+        $profile = Profile::where('user_id', $user_id)->first();
+        $profile->update($request->all());
+        return redirect()->route('profile.edit', $user_id)->with('success', 'Profile updated successfully');
+        
     }
 
     /**

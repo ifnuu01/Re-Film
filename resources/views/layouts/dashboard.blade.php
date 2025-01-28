@@ -45,6 +45,7 @@
             <h6 class="text-white">Help</h6>
             <a class="nav-link mb-2 @yield('guide-active')" href="{{Route('guide')}}"><i class="bi bi-info-square-fill"></i> Guide</a>
             @auth
+            <a class="nav-link mb-2 @yield('profile-active')" href="{{Route('profile.edit', Auth::user()->id)}}"><i class="bi bi-person-badge"></i> Profile</a>
             <a class="nav-link mb-2 @yield('settings-active')" href="{{Route('settings')}}"><i class="bi bi-gear-fill"></i> Settings</a>
             @endauth
         </nav>
