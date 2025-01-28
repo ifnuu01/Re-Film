@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('halaman')
-    Edit Profile
+    Edit Page Profile
 @endsection
 
 @section('profile-active')
