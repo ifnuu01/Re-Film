@@ -58,8 +58,8 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <a href="{{ route('film.index') }}" class="btn btn-secondary btn-sm">Back</a>
-                <button type="submit" class="btn btn-blue btn-sm">Add Film</button>
+                <a href="{{ route('film.index') }}" class="btn btn-secondary btn-sm text-white">Back</a>
+                <button type="submit" class="btn btn-blue btn-sm text-white">Add Film</button>
             </div>
         </div>
     </form>
