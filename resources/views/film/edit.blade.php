@@ -60,8 +60,8 @@
         </div> 
         <div class="row">
             <div class="col-md-6">
-                <a href="{{ url()->previous() }}" class="btn btn-secondary btn-sm">Back</a>
-                <button type="submit" class="btn btn-warning btn-sm">Edit Film</button>
+                <a href="{{ url()->previous() }}" class="btn btn-secondary btn-sm text-white">Back</a>
+                <button type="submit" class="btn btn-warning btn-sm text-white">Edit Film</button>
             </div>
         </div>
     </form>

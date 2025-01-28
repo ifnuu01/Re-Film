@@ -18,7 +18,7 @@
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
-        <a href="{{ route('genre.index') }}" class="btn btn-secondary btn-sm">Kembali</a>
-        <button type="submit" class="btn btn-warning btn-sm">Edit Genre</button>
+        <a href="{{ route('genre.index') }}" class="btn btn-secondary btn-sm text-white">Back</a>
+        <button type="submit" class="btn btn-warning btn-sm text-white">Edit Genre</button>
     </form>
 @endsection

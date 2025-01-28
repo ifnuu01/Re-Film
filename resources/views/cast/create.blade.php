@@ -38,8 +38,8 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                    <a href="{{ route('cast.index') }}" class="btn btn-secondary btn-sm">Back</a>
-                    <button type="submit" class="btn btn-blue btn-sm">Add Cast</button>
+                    <a href="{{ route('cast.index') }}" class="btn btn-secondary btn-sm text-white">Back</a>
+                    <button type="submit" class="btn btn-blue btn-sm text-white">Add Cast</button>
                 </form>
             </div>
         </div>

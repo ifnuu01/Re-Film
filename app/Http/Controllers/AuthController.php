@@ -42,7 +42,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('genre.index')->with('success', 'Registration successful');
+        return redirect()->route('home')->with('success', 'Registration successful');
     }
 
     public function login(Request $request)

@@ -38,8 +38,8 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                    <a href="{{ url()->previous() }}" class="btn btn-secondary btn-sm">Back</a>
-                    <button type="submit" class="btn btn-warning btn-sm">Edit Cast</button>
+                    <a href="{{ url()->previous() }}" class="btn btn-secondary btn-sm text-white">Back</a>
+                    <button type="submit" class="btn btn-warning btn-sm text-white">Edit Cast</button>
                 </form>
             </div>
         </div>
