@@ -47,8 +47,8 @@
                             @enderror
                         </div>
                     </div>
-                    <a href="{{ url()->previous() }}" class="btn btn-secondary btn-sm">Back</a>
-                    <button type="submit" class="btn btn-warning btn-sm">Add Actor</button>
+                    <a href="{{ url()->previous() }}" class="btn btn-secondary btn-sm text-white">Back</a>
+                    <button type="submit" class="btn btn-warning btn-sm text-white">Add Actor</button>
                 </form>
             </div>
         </div>

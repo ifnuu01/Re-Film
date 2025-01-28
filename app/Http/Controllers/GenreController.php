@@ -87,6 +87,12 @@ class GenreController extends Controller
     public function destroy($id)
     {
         $genre = Genre::find($id);
+        $films = Film::where('genre_id', $id)->get();
+
+        if($films){
+            return redirect()->route('genre.index')->with('error', 'Cannot delete genre because it has associated films');
+        }
+
         $genre->delete();
         return redirect()->route('genre.index')->with('success', 'Genre successfully deleted');
     }

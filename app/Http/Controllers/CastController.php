@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cast;
+use App\Models\Actor;
 use Illuminate\Http\Request;
 
 class CastController extends Controller
@@ -98,6 +99,12 @@ class CastController extends Controller
     public function destroy($id)
     {
         $cast = Cast::find($id);
+        $actors = Actor::where('cast_id', $id)->get();
+
+        if ($actors->count() > 0) {
+            return redirect()->route('cast.index')->with('error', 'Cannot delete this cast because it has actors.');
+        }
+
         if (!$cast) {
             abort(404);
         }

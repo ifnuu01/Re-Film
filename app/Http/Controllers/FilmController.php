@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Film;
 use App\Models\Genre;
+use App\Models\Actor;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class FilmController extends Controller
@@ -122,6 +124,14 @@ class FilmController extends Controller
     public function destroy($id)
     {
         $film = Film::find($id);
+        $actors = Actor::where('film_id', $id)->get();
+        $reviews = Review::where('film_id', $id)->get();
+        foreach ($actors as $actor) {
+            $actor->delete();
+        }
+        foreach ($reviews as $review) {
+            $review->delete();
+        }
         if ($film->poster) {
             unlink('storage/' . $film->poster);
         }

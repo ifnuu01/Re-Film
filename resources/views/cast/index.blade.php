@@ -44,6 +44,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+        @if (session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{{ session('error') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         @auth
         <a href="{{ route('cast.create') }}" class="btn btn-blue btn-sm mb-3">Add Cast</a>
         <table id="example" class="table table-stripped table-hover">
