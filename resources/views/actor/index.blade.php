@@ -44,6 +44,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+        @auth
+            
         <a href="{{ route('actor.create') }}" class="btn btn-blue btn-sm mb-3">Add Actor</a>
         <table id="example" class="table table-stripped table-hover">
             <thead class="table-dark">
@@ -78,5 +80,28 @@
                 @endforelse
             </tbody>
         </table>
+        @endauth
+        @guest
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            @forelse ($actors as $actor)
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $actor->name }}</h5>
+                        <p class="card-text">Film: {{ $actor->film->title }}</p>
+                        <p class="card-text">Cast: {{ $actor->cast->name }}</p>
+                    </div>
+                </div>
+            </div>
+            @empty
+            <div class="col">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Data is empty</h5>
+                    </div>
+                </div>
+            </div>
+            @endforelse
+        @endguest
     </div>
-@endsection
+    @endsection
