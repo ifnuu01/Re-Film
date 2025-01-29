@@ -85,7 +85,7 @@
         <div class="row row-cols-1 row-cols-md-4 g-4">
             @forelse ($actors as $actor)
             <div class="col">
-                <div class="card bg-dark text-white">
+                <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">{{ $actor->name }}</h5>
                         <p class="card-text">Film: {{ $actor->film->title }}</p>
@@ -95,7 +95,7 @@
             </div>
             @empty
             <div class="col">
-                <div class="card bg-dark text-white">
+                <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Data is empty</h5>
                     </div>
